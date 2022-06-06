@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "16.15.1",
+    "npm": "6.14.15"
+  },
+  "scripts": {
+   "start": "node app.js"
+  },
+  "keywords": [
+    "Servey"
+  ],
+  "author": "Bismark Obeng",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5"
+  }
+}
