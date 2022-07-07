@@ -1,0 +1,1 @@
+exports.getGoogleProfile = (req, res) => {};

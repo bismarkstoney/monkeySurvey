@@ -1,22 +1,26 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "engines": {
-    "node": "16.15.1",
-    "npm": "6.14.15"
-  },
-  "scripts": {
-   "start": "node app.js"
-  },
-  "keywords": [
-    "Servey"
-  ],
-  "author": "Bismark Obeng",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.1",
-    "mongoose": "^6.3.5"
-  }
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"engines": {
+		"node": "16.15.1",
+		"npm": "6.14.15"
+	},
+	"scripts": {
+		"start": "node app.js",
+		"stress": "artillery quick --count 10 -n 20 http://localhost:5000"
+	},
+	"keywords": [
+		"Servey"
+	],
+	"author": "Bismark Obeng",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"mongoose": "^6.3.5",
+		"passport": "^0.6.0",
+		"passport-google-oauth20": "^2.0.0"
+	}
 }
