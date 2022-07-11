@@ -23,6 +23,11 @@ const authRouter = require('./routes/authRouter');
 
 const PORT = process.env.PORT || 5000;
 
+app.get('/', (req, res) => {
+	res.status(200).json({
+		message: 'Welcome',
+	});
+});
 app.use('/auth/google', authRouter);
 app.listen(PORT, () => {
 	console.log(`The server is running on ${PORT}`);
