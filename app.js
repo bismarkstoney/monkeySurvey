@@ -4,6 +4,8 @@ const express = require('express');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const connectDB = require('./config/db/db');
+const authRouter = require('./routes/authRouter');
+const githubRouter = require('./routes/github');
 const app = express();
 //Client ID
 //Client secret
@@ -19,7 +21,6 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-const authRouter = require('./routes/authRouter');
 
 const PORT = process.env.PORT || 5000;
 
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
 		message: 'Welcome',
 	});
 });
+app.use('/auth/github', githubRouter);
 app.use('/auth/google', authRouter);
 app.listen(PORT, () => {
 	console.log(`The server is running on ${PORT}`);
